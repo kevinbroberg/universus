@@ -15,7 +15,6 @@ with open(sauce, "r") as read:
 
 contained = data["ObjectStates"][0]
 cards = [card["Nickname"].lower() for card in contained["ContainedObjects"]]
-print Counter(cards)
 deck = ["{} {}".format(qty, name) for name, qty in Counter(cards).items()]
 
 with open(deck_name + ".txt", "w") as outfile:
