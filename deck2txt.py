@@ -2,12 +2,9 @@
 import json
 import argparse
 from collections import Counter
+from tkinter import filedialog
 
-parser = argparse.ArgumentParser(description='Transforms a TTS object into a text deck.')
-parser.add_argument('deck', metavar='deck', type=str,
-                    help='deck json file to read. should end in .json')
-args = parser.parse_args()
-sauce = args.deck
+sauce = filedialog.askopenfilename()
 deck_name = sauce.partition('.json')[0]
 
 with open(sauce, "r") as read:

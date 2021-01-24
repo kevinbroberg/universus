@@ -2,12 +2,9 @@
 import re
 import json
 import argparse
+from tkinter import filedialog
 
-parser = argparse.ArgumentParser(description='Transforms a txt decklist into TTS object.')
-parser.add_argument('infile', metavar='file', type=str,
-                    help='name of file to read')
-args = parser.parse_args()
-deck_spec = args.infile
+deck_spec = filedialog.askopenfilename()
 deck_name = deck_spec.partition('.txt')[0]
 
 with open(deck_spec, "r") as read:
