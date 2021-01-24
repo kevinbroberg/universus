@@ -18,7 +18,7 @@ def tuples_to_deck(tuples):
     return [cards[name[1]] for name in tuples if name[1] in cards for _ in range(int(name[0]))]
 
 
- stack = "2781_stack.json"
+stack = "2781_stack.json"
 
 target_dir = ""
 
